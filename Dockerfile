@@ -10,7 +10,7 @@ RUN install_packages xserver-xorg=1:7.7+19 \
   dbus-x11 \
   matchbox-keyboard \
   xterm \
-  snap \
+  snapd \
   chromium
 
 RUN snap install --classic code
