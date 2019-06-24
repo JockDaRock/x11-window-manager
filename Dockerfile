@@ -13,6 +13,8 @@ RUN install_packages xserver-xorg=1:7.7+19 \
   snapd \
   chromium
 
+RUN apt install snapd
+
 RUN snap install --classic code
 
 
