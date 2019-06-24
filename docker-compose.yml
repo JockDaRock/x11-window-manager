@@ -1,0 +1,14 @@
+version: "2"
+services:
+  dsk-top:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DISPLAY=:0.0
+      #- HOME=/data
+      #- LISTEN=0.0.0.0
+    network_mode: "host"
+    #privileged: true
+    #volumes:
+      #- resin-data:/data
