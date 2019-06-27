@@ -12,7 +12,7 @@ RUN apt-get update && apt-get -y install xserver-xorg=1:7.7+19 \
   dbus-x11 \
   matchbox-keyboard \
   xterm \
-  chromium \
+  chromium-bsu \
   apt-transport-https
 
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg \
