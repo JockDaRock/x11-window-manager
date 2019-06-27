@@ -1,4 +1,5 @@
-FROM balenalib/intel-nuc-debian:stretch-run
+# FROM balenalib/intel-nuc-debian:stretch-run
+FROM ubuntu
 
 # Install XORG
 RUN install_packages xserver-xorg=1:7.7+19 \
