@@ -6,13 +6,13 @@ ARG DEBIAN_FRONTEND=noninteractive
 # Install XORG
 #RUN install_packages xserver-xorg=1:7.7+19 \
 RUN apt-get update && apt-get -y install xserver-xorg \
-  xserver-xorg-input-all \
-  xinit \
+  #xserver-xorg-input-all \
+  #xinit \
   #xfce4 \
   #xfce4-terminal \
-  x11-xserver-utils \
+  #x11-xserver-utils \
   #ubuntu-desktop \
-  dbus-x11 \
+  #dbus-x11 \
   matchbox-keyboard \
   xterm \
   chromium-bsu \
