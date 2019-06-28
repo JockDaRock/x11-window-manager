@@ -17,7 +17,8 @@ RUN apt-get update && apt-get -y install xserver-xorg \
   xterm \
   chromium-bsu \
   apt-transport-https \
-  curl
+  curl \
+  taskel
 
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg \
     && install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ \
@@ -27,9 +28,9 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > mic
     && apt-get install code
 
 # Disable screen from turning it off
-RUN echo "#!/bin/bash" > /etc/X11/xinit/xserverrc \
-  && echo "" >> /etc/X11/xinit/xserverrc \
-  && echo 'exec /usr/bin/X -s 0 dpms' >> /etc/X11/xinit/xserverrc 
+#RUN echo "#!/bin/bash" > /etc/X11/xinit/xserverrc \
+#  && echo "" >> /etc/X11/xinit/xserverrc \
+#  && echo 'exec /usr/bin/X -s 0 dpms' >> /etc/X11/xinit/xserverrc
 
 # Setting working directory
 WORKDIR /usr/src/app
