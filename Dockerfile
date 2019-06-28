@@ -1,6 +1,8 @@
 # FROM balenalib/intel-nuc-debian:stretch-run
 FROM ubuntu
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 # Install XORG
 #RUN install_packages xserver-xorg=1:7.7+19 \
 RUN apt-get update && apt-get -y install xserver-xorg \
