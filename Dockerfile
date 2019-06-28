@@ -11,7 +11,7 @@ RUN apt-get update && apt-get -y install xserver-xorg \
   #xfce4 \
   #xfce4-terminal \
   x11-xserver-utils \
-  ubuntu-desktop \
+  #ubuntu-desktop \
   dbus-x11 \
   matchbox-keyboard \
   xterm \
@@ -19,6 +19,8 @@ RUN apt-get update && apt-get -y install xserver-xorg \
   apt-transport-https \
   curl \
   taskel
+
+RUN taskel install ubuntu-desktop
 
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg \
     && install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ \
