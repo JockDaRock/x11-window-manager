@@ -1,5 +1,5 @@
 # FROM balenalib/intel-nuc-debian:stretch-run
-FROM ubuntu
+FROM balenalib/intel-nuc-ubuntu
 
 ARG DEBIAN_FRONTEND=noninteractive
 
