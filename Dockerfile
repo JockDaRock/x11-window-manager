@@ -16,7 +16,6 @@ RUN apt-get update && apt-get -y install \
   dbus-x11 \
   matchbox-keyboard \
   xterm \
-  chromium-bsu \
   apt-transport-https \
   curl
   #tasksel
