@@ -9,8 +9,8 @@ RUN apt-get update && apt-get -y install \
   xserver-xorg \
   xserver-xorg-input-all \
   xinit \
-  #xfce4 \
-  #xfce4-terminal \
+  xfce4 \
+  xfce4-terminal \
   x11-xserver-utils \
   ubuntu-desktop \
   dbus-x11 \
