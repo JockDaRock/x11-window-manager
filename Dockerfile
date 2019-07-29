@@ -12,7 +12,7 @@ RUN apt-get update && apt-get -y install \
   xfce4 \
   xfce4-terminal \
   x11-xserver-utils \
-  ubuntu-desktop \
+  #ubuntu-desktop \
   dbus-x11 \
   matchbox-keyboard \
   xterm \
