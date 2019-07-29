@@ -1,26 +1,27 @@
-# FROM balenalib/intel-nuc-debian:stretch-run
-FROM balenalib/intel-nuc-ubuntu
+FROM balenalib/intel-nuc-debian:stretch-run
+#FROM balenalib/intel-nuc-ubuntu
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Install XORG
 #RUN install_packages xserver-xorg=1:7.7+19 \
-RUN apt-get update && apt-get -y install xserver-xorg \
-  #xserver-xorg-input-all \
-  #xinit \
-  #xfce4 \
-  #xfce4-terminal \
-  #x11-xserver-utils \
-  #ubuntu-desktop \
-  #dbus-x11 \
+RUN apt-get update && apt-get -y install \
+  xserver-xorg \
+  xserver-xorg-input-all \
+  xinit \
+  xfce4 \
+  xfce4-terminal \
+  x11-xserver-utils \
+  ubuntu-desktop \
+  dbus-x11 \
   matchbox-keyboard \
   xterm \
   chromium-bsu \
   apt-transport-https \
-  curl \
-  tasksel
+  curl
+  #tasksel
 
-RUN tasksel install ubuntu-desktop
+#RUN tasksel install ubuntu-desktop
 
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg \
     && install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ \
@@ -30,9 +31,9 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > mic
     && apt-get install code
 
 # Disable screen from turning it off
-#RUN echo "#!/bin/bash" > /etc/X11/xinit/xserverrc \
-#  && echo "" >> /etc/X11/xinit/xserverrc \
-#  && echo 'exec /usr/bin/X -s 0 dpms' >> /etc/X11/xinit/xserverrc
+RUN echo "#!/bin/bash" > /etc/X11/xinit/xserverrc \
+  && echo "" >> /etc/X11/xinit/xserverrc \
+  && echo 'exec /usr/bin/X -s 0 dpms' >> /etc/X11/xinit/xserverrc
 
 # Setting working directory
 WORKDIR /usr/src/app
