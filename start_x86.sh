@@ -17,5 +17,5 @@ echo "STARTING X"
 # startx -- -nocursor
 
 # uncomment to open an application instead of the desktop
-startx xterm
-# startx code --user-data-dir /usr/src/app
+# startx xterm
+startx code --user-data-dir /usr/src/app
