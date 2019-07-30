@@ -39,8 +39,8 @@ RUN echo "#!/bin/bash" > /etc/X11/xinit/xserverrc \
   && echo 'exec /usr/bin/X -s 0 dpms' >> /etc/X11/xinit/xserverrc
 
 
-COPY .dmrc /data/.dmrc
-RUN chmod 644 /data/.dmrc
+#COPY .dmrc /data/.dmrc
+#RUN chmod 644 /data/.dmrc
 
 # Setting working directory
 WORKDIR /usr/src/app
