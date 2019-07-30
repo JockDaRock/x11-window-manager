@@ -22,9 +22,9 @@ RUN apt-get update && apt-get -y install \
 
 #RUN tasksel install ubuntu-desktop
 
-#RUN apt install -y gnome-shell ubuntu-gnome-desktop
+RUN apt install -y gnome-shell ubuntu-gnome-desktop
 
-RUN apt-get -y install xfce4 xfce4-terminal
+#RUN apt-get -y install xfce4 xfce4-terminal
 
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg \
     && install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ \
