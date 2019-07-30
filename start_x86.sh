@@ -12,12 +12,14 @@ fi
 # start desktop manager
 echo "STARTING X"
 
-# startx
+startx
 
 # uncomment to start x without mouse cursor
 # startx -- -nocursor
 
 # uncomment to open an application instead of the desktop
 # startx xterm
+
+# Failed starts
 # startx code
-startx /usr/bin/gnome-session
+# startx /usr/bin/gnome-session
