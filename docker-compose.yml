@@ -12,6 +12,8 @@ services:
     privileged: true
     volumes:
       - resin-data:/data
+    labels:
+      io.resin.features.dbus: '1'
 
 volumes:
     resin-data:
