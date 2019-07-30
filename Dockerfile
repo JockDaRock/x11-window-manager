@@ -22,7 +22,7 @@ RUN apt-get update && apt-get -y install \
 
 #RUN tasksel install ubuntu-desktop
 
-RUN apt install -y gnome-shell ubuntu-gnome-desktop
+#RUN apt install -y gnome-shell ubuntu-gnome-desktop
 
 RUN apt-get -y install xfce4 xfce4-terminal
 
