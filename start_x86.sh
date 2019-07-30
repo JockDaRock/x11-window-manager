@@ -9,10 +9,13 @@ if [[ ! -z "$ROTATE_DISPLAY" ]]; then
   (sleep 3 && DISPLAY=:0 xrandr -o $ROTATE_DISPLAY) & 
 fi
 
-# start desktop manager
-echo "STARTING X"
+# start shell
+/bin/bash
 
-startx
+# start desktop manager
+# echo "STARTING X"
+
+#startx
 
 # uncomment to start x without mouse cursor
 # startx -- -nocursor
