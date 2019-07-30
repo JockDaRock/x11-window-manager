@@ -17,7 +17,7 @@ RUN apt-get update && apt-get -y install \
   matchbox-keyboard \
   xterm \
   apt-transport-https \
-  curl
+  curl \
   lightdm
   #tasksel
 
